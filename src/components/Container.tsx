@@ -7,4 +7,6 @@ export const StyledContainer = styled.div`
 
   padding: 0 15px;
   margin: 0 auto;
+
+  outline: 1px solid red;
 `;

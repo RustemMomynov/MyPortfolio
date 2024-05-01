@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -18,7 +19,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul {
-  list-style: none;
-}
+
+a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  section {
+    padding: 100px 0;
+  }
+
+  section:nth-of-type(odd) {
+    background-color: ${theme.colors.primaryBg};
+  }
+
+  section:nth-of-type(even) {
+    background-color: ${theme.colors.secondaryBg};
+  }
+
+  h3 {
+  }
+
+  p {
+  }
 `;

@@ -4,7 +4,7 @@ import ProgressBar from "../../../components/progressBar/ProgressBar";
 import { S } from "./About_Styles";
 import { StyledContainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
+import { SectionTitle } from "../../../components/SectionTitle";
 
 interface AboutProps {}
 
