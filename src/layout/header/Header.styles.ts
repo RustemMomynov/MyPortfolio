@@ -7,7 +7,8 @@ const Header = styled.header`
   right: 0;
   left: 0;
 
-  background-color: rgba(${theme.colors.secondaryBg}, 0.5);
+  background-color: rgba(${theme.colors.secondaryBg} 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   color: ${theme.colors.font2};
 
@@ -45,7 +46,7 @@ const MenuItem = styled.li`
 
   &:hover {
     ::after {
-      width: 100%;
+      width: 105%;
     }
   }
 `;
