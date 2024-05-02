@@ -6,12 +6,19 @@ import Logo from "../../components/logo/Logo";
 
 interface HeaderProps {}
 
+const MenuItems = [
+  { name: "Home", link: "" },
+  { name: "About", link: "" },
+  { name: "Works", link: "" },
+  { name: "Contacts", link: "" },
+];
+
 const Header: FC<HeaderProps> = () => {
   return (
     <S.Header>
       <FlexWrapper justify="space-between">
         <Logo textLogo="Rustem." />
-        <Menu />
+        <Menu items={MenuItems} />
       </FlexWrapper>
     </S.Header>
   );

@@ -7,23 +7,55 @@ const Header = styled.header`
   right: 0;
   left: 0;
 
-  background-color: ${theme.colors.secondaryBg};
+  background-color: rgba(${theme.colors.secondaryBg}, 0.5);
+
   color: ${theme.colors.font2};
 
   padding: 30px 80px;
 
-  outline: solid 2px white;
+  /* outline: solid 2px white; */
 `;
 
 const Nav = styled.nav``;
 
 const Menu = styled.ul`
   list-style: none;
+
+  display: flex;
+  gap: 20px;
 `;
 
-const MenuItem = styled.li``;
+const MenuItem = styled.li`
+  position: relative;
 
-const MenuItemLink = styled.a``;
+  ::after {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    content: "";
+
+    width: 0%;
+    height: 1px;
+    background-color: ${theme.colors.font2};
+
+    transition: width 0.5s;
+  }
+
+  &:hover {
+    ::after {
+      width: 100%;
+    }
+  }
+`;
+
+const MenuItemLink = styled.a`
+  font-size: 20px;
+  line-height: 55px;
+
+  text-align: center;
+`;
 
 export const S = {
   Header,

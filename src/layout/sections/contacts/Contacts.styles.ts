@@ -7,7 +7,7 @@ const Contacts = styled.section`
 `;
 
 const MessageBlock = styled.div`
-  max-width: 45%;
+  max-width: 50%;
   width: 100%;
 
   padding: 15px;
@@ -18,6 +18,7 @@ const MessageBlock = styled.div`
 const Description = styled.p``;
 
 const Form = styled.form`
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -25,16 +26,17 @@ const Form = styled.form`
 
 const Field = styled.input``;
 
-const phoneNumber = styled.div`
+const PhoneNumber = styled.div`
+  width: 40%;
+
   display: flex;
-  justify-content: flex-end;
-  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  /* align-items: flex-end; */
 `;
 
 const SocialLinks = styled.ul`
   display: flex;
-  justify-content: flex-end;
-  align-items: end;
   gap: 10px;
 `;
 
@@ -42,14 +44,34 @@ const Item = styled.li``;
 
 const Link = styled.a``;
 
+const Contact = styled.div`
+  max-width: 35%;
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid ${theme.colors.secondaryBg};
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const ContactMe = styled.div``;
+
+const Email = styled.div``;
+
 export const S = {
   Contacts,
   MessageBlock,
   Description,
   Form,
   Field,
-  phoneNumber,
+  PhoneNumber,
   SocialLinks,
   Item,
   Link,
+  Contact,
+  ContactMe,
+  Email,
 };

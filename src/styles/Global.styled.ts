@@ -22,27 +22,30 @@ body {
 
 a {
     text-decoration: none;
-  }
+    color: ${theme.colors.font2};
+}
 
-  ul {
+ul {
     list-style: none;
-  }
+}
 
-  section {
+section {
     padding: 100px 0;
-  }
+    /* background-color: ${theme.colors.secondaryBg};
+    color: ${theme.colors.font2}; */
+}
 
-  section:nth-of-type(odd) {
+section:nth-of-type(odd) {
     background-color: ${theme.colors.primaryBg};
-  }
+}
 
-  section:nth-of-type(even) {
+section:nth-of-type(even) {
     background-color: ${theme.colors.secondaryBg};
-  }
+}
 
-  h3 {
-  }
+h3 {
+}
 
-  p {
-  }
+p {
+}
 `;
