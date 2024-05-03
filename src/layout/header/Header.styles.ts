@@ -56,6 +56,8 @@ const MenuItemLink = styled.a`
   line-height: 55px;
 
   text-align: center;
+
+  color: ${theme.colors.font2};
 `;
 
 export const S = {

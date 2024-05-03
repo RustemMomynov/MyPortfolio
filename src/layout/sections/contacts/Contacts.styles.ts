@@ -38,6 +38,7 @@ const PhoneNumber = styled.div`
 const SocialLinks = styled.ul`
   display: flex;
   gap: 10px;
+  color: ${theme.colors.font1};
 `;
 
 const Item = styled.li``;
