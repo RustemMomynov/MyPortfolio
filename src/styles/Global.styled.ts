@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import { StyledBtn } from "../components/Button";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -19,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 a {
     text-decoration: none;
 }
@@ -36,6 +36,7 @@ section {
 
 section:nth-of-type(odd) {
     background-color: ${theme.colors.primaryBg};
+
 }
 
 section:nth-of-type(even) {

@@ -3,6 +3,7 @@ import { theme } from "../../../styles/Theme";
 import myPhoto from "./../../../assets/images/myPhoto.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { StyledContainer } from "../../../components/Container";
+import { StyledBtn } from "../../../components/Button";
 
 const Main = styled.main`
   height: 100vh;
@@ -19,15 +20,46 @@ const Main = styled.main`
 
 const ContentWrapper = styled.div`
   text-align: left;
+
+  ${StyledBtn} {
+    width: 250px;
+    height: 80px;
+
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: rgba(1, 1, 1, 0);
+    color: ${theme.colors.font2};
+    border: 1px solid ${theme.colors.primaryBg};
+
+    cursor: pointer;
+
+    ::hover {
+      background-color: rgba(1, 1, 1, 0);
+      color: ${theme.colors.font2};
+      border: 1px solid ${theme.colors.primaryBg};
+    }
+  }
 `;
 
-const MainTitle = styled.h1``;
+const Name = styled.h2`
+  font-size: 84.7px;
+  font-weight: bold;
+`;
 
-const Name = styled.h2``;
+const MainTitle = styled.h1`
+  font-size: 52.3px;
+  font-weight: 430;
+`;
 
-const PersonalInfo = styled.div``;
+const PersonalInfo = styled.p`
+  font-size: 32.3px;
+  line-height: 2;
 
-const Button = styled.button``;
+  margin: 35px 0 65px;
+`;
 
 export const S = {
   Main,
@@ -35,5 +67,4 @@ export const S = {
   MainTitle,
   Name,
   PersonalInfo,
-  Button,
 };

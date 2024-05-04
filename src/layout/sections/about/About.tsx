@@ -13,6 +13,7 @@ const About: FC<AboutProps> = () => {
     <S.About>
       <StyledContainer>
         <SectionTitle>WHO AM I</SectionTitle>
+
         <FlexWrapper justify="space-between">
           <S.PersonalInfo>
             <p style={{ width: "640px" }}>

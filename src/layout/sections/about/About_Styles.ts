@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const About = styled.section`
-  height: 50vh;
-`;
+const About = styled.section``;
 
 const PersonalInfo = styled.div``;
 
