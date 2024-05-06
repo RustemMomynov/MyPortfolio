@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
-const Contacts = styled.section`
-  background-color: ${theme.colors.primaryBg};
-  color: ${theme.colors.font1};
-`;
+const Contacts = styled.section``;
 
 const MessageBlock = styled.div`
   max-width: 50%;
@@ -32,7 +29,6 @@ const PhoneNumber = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* align-items: flex-end; */
 `;
 
 const SocialLinks = styled.ul`

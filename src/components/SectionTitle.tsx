@@ -6,11 +6,9 @@ export const SectionTitle = styled.h3`
 
   color: ${theme.colors.font1};
   font-weight: 400;
-  font-size: 32.3px;
+  font-size: 20px;
   margin-bottom: 90px;
   text-align: center;
-
-  width: 350px;
 
   ::after {
     position: absolute;

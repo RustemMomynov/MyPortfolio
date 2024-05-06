@@ -4,26 +4,52 @@ import { StyledContainer } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import Work from "./work/Work";
-import photo1 from "./../../../assets/images/works/React.png";
-import photo2 from "./../../../assets/images/works/MNTN.png";
-import photo3 from "./../../../assets/images/works/Mogo.png";
+import ReactAppPhoto from "./../../../assets/images/works/React.png";
+import MNTNPhoto from "./../../../assets/images/works/MNTN.png";
+import MogoPhoto from "./../../../assets/images/works/Mogo.png";
 
 interface WorksProps {}
+
+const WorksData = [
+  {
+    title: "React App",
+    photo: ReactAppPhoto,
+    links: {
+      site: "https://rustemmomynov.github.io/middle-hosted-React-Redux-AntDesign-Typescript",
+      code: "https://github.com/RustemMomynov/middle-React-Redux-AntDesign-TypeScript",
+    },
+  },
+  {
+    title: "MNTN",
+    photo: MNTNPhoto,
+    links: {
+      site: "https://rustemmomynov.github.io/MNTN__Layout/",
+      code: "https://github.com/RustemMomynov/MNTN__Layout",
+    },
+  },
+  {
+    title: "MoGo",
+    photo: MogoPhoto,
+    links: {
+      site: "https://rustemmomynov.github.io/HTML-CSS---Mogo/",
+      code: "https://github.com/RustemMomynov/HTML-CSS---Mogo",
+    },
+  },
+];
+
+const works = WorksData.map((w, index) => {
+  return (
+    <Work imgSrc={w.photo} links={w.links} title={w.title} number={index + 1} />
+  );
+});
 
 const Works: FC<WorksProps> = () => {
   return (
     <S.Works>
       <StyledContainer>
         <SectionTitle>Works</SectionTitle>
-        <FlexWrapper justify="center" gap="20px" wrap="wrap">
-          <Work
-            imgSrc={photo1}
-            links={["", ""]}
-            text="React project"
-            number={1}
-          />
-          <Work imgSrc={photo2} links={["", ""]} text="MNTN" number={2} />
-          <Work imgSrc={photo3} links={["", ""]} text="Mogo" number={3} />
+        <FlexWrapper justify="space-evenly" gap="20px" wrap="wrap">
+          {works}
         </FlexWrapper>
       </StyledContainer>
     </S.Works>

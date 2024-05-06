@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { Line } from "rc-progress";
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 interface ProgressBarProps {
   percent: number;
@@ -24,7 +25,7 @@ const ProgressBar: FC<ProgressBarProps> = (props) => {
     <BarWrapper>
       <Line
         percent={percent}
-        strokeColor="#3A3422"
+        strokeColor={theme.colors.font1}
         strokeWidth={1}
         trailWidth={0.5}
         trailColor="#DBDBDB"

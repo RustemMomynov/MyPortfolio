@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
-import { StyledBtn } from "../components/Button";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -11,9 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background-color: "#ECECEC";
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
