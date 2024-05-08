@@ -13,18 +13,43 @@ const Works = styled.section`
 
 const Work = styled.div``;
 
-const ImageWrapper = styled.div``;
+const ImageWrapper = styled.div`
+  position: relative;
+`;
 
 const Img = styled.img`
   max-width: 630px;
   width: 100%;
   height: 335px;
   object-fit: cover;
+
+  ::hover {
+    filter: grayscale(100%);
+  }
 `;
 
-const LinksWrapper = styled.div``;
+const LinksWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-const Link = styled.a``;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 200px;
+  height: 40px;
+  /* background-color: red; */
+`;
+
+const Link = styled.a`
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+`;
 
 const Description = styled.div`
   font-size: 20px;

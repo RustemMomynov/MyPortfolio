@@ -9,6 +9,7 @@ export const SectionTitle = styled.h3`
   font-size: 20px;
   margin-bottom: 90px;
   text-align: center;
+  text-transform: uppercase;
 
   ::after {
     position: absolute;
