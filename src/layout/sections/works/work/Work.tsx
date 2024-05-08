@@ -6,12 +6,13 @@ interface WorkProps {
   imgSrc: string;
   number: number;
   title: string;
+  style?: React.CSSProperties | undefined;
   links: { site: string; code: string };
 }
 
 const Work: FC<WorkProps> = (props) => {
   return (
-    <S.Work>
+    <S.Work style={props.style}>
       <S.ImageWrapper>
         <S.Img src={props.imgSrc} />
         <S.LinksWrapper>

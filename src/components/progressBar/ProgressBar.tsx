@@ -37,4 +37,6 @@ const ProgressBar: FC<ProgressBarProps> = (props) => {
 
 export default ProgressBar;
 
-const BarWrapper = styled.div``;
+const BarWrapper = styled.div`
+  height: 20px;
+`;

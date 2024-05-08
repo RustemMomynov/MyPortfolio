@@ -5,15 +5,18 @@ import { theme } from "../../../styles/Theme";
 const About = styled.section``;
 
 const PersonalInfo = styled.div`
-  position: relative;
-
+  display: flex;
+  max-width: 600px;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 600px;
 
-  ${StyledBtn} {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  @media (max-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
+  ${StyledBtn} {
     width: 200px;
     height: 60px;
 
@@ -43,9 +46,13 @@ const Skills = styled.ul`
   width: 100%;
 
   font-size: 20px;
+  /* line-height: 100%;
+  margin-bottom: 10px; */
 `;
 
-const Skill = styled.li``;
+const Skill = styled.li`
+  margin-bottom: 10px;
+`;
 
 const SkillTitle = styled.div``;
 

@@ -13,7 +13,7 @@ const Contacts: FC<ContactsProps> = () => {
         <FlexWrapper justify="space-between">
           <S.MessageBlock>
             <S.Description>
-              If you wish to contact me, give me a call or send me an e-mail
+              [ If you wish to contact me, give me a call or send me an e-mail ]
             </S.Description>
             <FlexWrapper justify="space-between" style={{ height: "unset" }}>
               <S.Form>
