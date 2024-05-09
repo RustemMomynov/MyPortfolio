@@ -11,11 +11,12 @@ const MessageBlock = styled.div`
 
   padding: 15px;
 
-  border: 1px solid #dbdbdb;
+  /* border: 1px solid #dbdbdb; */
 `;
 
 const Description = styled.p`
   margin-bottom: 50px;
+  text-transform: uppercase;
 `;
 
 const Form = styled.form`
@@ -43,7 +44,10 @@ const Field = styled.input`
 `;
 
 const PhoneNumber = styled.div`
-  width: 40%;
+  font-size: 32.3px;
+  font-weight: 700;
+
+  /* width: 40%; */
 
   display: flex;
   flex-direction: column;
@@ -66,7 +70,7 @@ const Contact = styled.div`
 
   padding: 15px;
 
-  border: 1px solid #dbdbdb;
+  /* border: 1px solid #dbdbdb; */
 
   display: flex;
   flex-direction: column;
@@ -75,7 +79,10 @@ const Contact = styled.div`
 
 const ContactMe = styled.div``;
 
-const Email = styled.div``;
+const Email = styled.div`
+  font-size: 32.3px;
+  font-weight: 700;
+`;
 
 export const S = {
   Contacts,

@@ -15,19 +15,27 @@ const Work: FC<WorkProps> = (props) => {
     <S.Work style={props.style}>
       <S.ImageWrapper>
         <S.Img src={props.imgSrc} />
-        <S.LinksWrapper>
+        {/* <S.LinksWrapper>
           <S.Link target="_blank" href={props.links.site}>
             SITE
           </S.Link>
           <S.Link target="_blank" href={props.links.code}>
             CODE
           </S.Link>
-        </S.LinksWrapper>
+        </S.LinksWrapper> */}
       </S.ImageWrapper>
 
       <S.Description>
         <FlexWrapper justify="space-between">
-          <S.Title>{props.title}</S.Title>
+          <S.Title>
+            {props.title} /{" "}
+            <S.Link target="_blank" href={props.links.site}>
+              SITE
+            </S.Link>
+            <S.Link target="_blank" href={props.links.code}>
+              CODE
+            </S.Link>
+          </S.Title>
           <S.Number>{`/00${props.number}`}</S.Number>
         </FlexWrapper>
       </S.Description>

@@ -3,6 +3,7 @@ import { S } from "./Contacts.styles";
 import { StyledContainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { StyledBtn } from "../../../components/Button";
+import { SectionTitle } from "../../../components/SectionTitle";
 
 interface ContactsProps {}
 
@@ -10,8 +11,8 @@ const Contacts: FC<ContactsProps> = () => {
   return (
     <S.Contacts>
       <StyledContainer>
-        <FlexWrapper justify="space-between">
-          <S.MessageBlock>
+        <FlexWrapper justify="center">
+          {/* <S.MessageBlock>
             <S.Description>
               [ If you wish to contact me, give me a call or send me an e-mail ]
             </S.Description>
@@ -24,10 +25,12 @@ const Contacts: FC<ContactsProps> = () => {
               </S.Form>
               <S.PhoneNumber>+7 707 835 52 33</S.PhoneNumber>
             </FlexWrapper>
-          </S.MessageBlock>
+          </S.MessageBlock> */}
           <S.Contact>
             <S.ContactMe>
-              contact me<S.Email>slehder5657@gmail.com</S.Email>
+              <SectionTitle>contact me</SectionTitle>
+              <S.Email>slehder5657@gmail.com</S.Email>
+              <S.PhoneNumber>+7 707 835 52 33</S.PhoneNumber>
             </S.ContactMe>
 
             <S.SocialLinks>

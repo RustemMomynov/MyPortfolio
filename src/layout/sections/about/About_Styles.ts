@@ -39,6 +39,7 @@ const PersonalInfo = styled.div`
 
 const Description = styled.p`
   font-size: 20px;
+  line-height: 1.5;
 `;
 
 const Skills = styled.ul`

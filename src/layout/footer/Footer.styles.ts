@@ -12,8 +12,6 @@ const Name = styled.span`
   font-size: 22px;
   font-weight: 700;
 
-  letter-spacing: 3px;
-
   padding-bottom: 20px;
 `;
 

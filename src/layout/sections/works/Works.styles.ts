@@ -29,7 +29,7 @@ const Img = styled.img`
 `;
 
 const LinksWrapper = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   transform: translateY(-50%);
 
@@ -41,13 +41,15 @@ const LinksWrapper = styled.div`
 
   width: 200px;
   height: 40px;
-  /* background-color: red; */
+  background-color: red; */
 `;
 
 const Link = styled.a`
-  width: 80px;
+  /* width: 80px;
   height: 40px;
   background-color: black;
+  color: white; */
+
   color: white;
 `;
 
