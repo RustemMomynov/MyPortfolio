@@ -11,26 +11,20 @@ const Contacts: FC<ContactsProps> = () => {
   return (
     <S.Contacts>
       <StyledContainer>
-        <FlexWrapper justify="center">
-          {/* <S.MessageBlock>
-            <S.Description>
-              [ If you wish to contact me, give me a call or send me an e-mail ]
-            </S.Description>
-            <FlexWrapper justify="space-between" style={{ height: "unset" }}>
-              <S.Form>
-                <S.Field type="text" placeholder="Name" />
-                <S.Field type="email" placeholder="Email" />
-                <S.Field as={"textarea"} placeholder="Message" />
-                <StyledBtn type="submit">Send Message</StyledBtn>
-              </S.Form>
-              <S.PhoneNumber>+7 707 835 52 33</S.PhoneNumber>
-            </FlexWrapper>
-          </S.MessageBlock> */}
+        <SectionTitle>contact me</SectionTitle>
+        <FlexWrapper justify="space-between" gap="50px">
+          <S.MessageBlock>
+            <S.Form>
+              <S.Field type="text" placeholder="Name" />
+              <S.Field type="email" placeholder="Email" />
+              <S.Field as={"textarea"} placeholder="Message" />
+              <StyledBtn type="submit">Send</StyledBtn>
+            </S.Form>
+          </S.MessageBlock>
           <S.Contact>
             <S.ContactMe>
-              <SectionTitle>contact me</SectionTitle>
+              <S.PhoneNumber>+7 707 835-52-33</S.PhoneNumber>
               <S.Email>slehder5657@gmail.com</S.Email>
-              <S.PhoneNumber>+7 707 835 52 33</S.PhoneNumber>
             </S.ContactMe>
 
             <S.SocialLinks>

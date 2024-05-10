@@ -41,11 +41,13 @@ const works = WorksData.map((w, index) => {
   const style = {
     margin: "0 auto",
   };
-  const isEndOdd = WorksData.length % 2 === 0 && index === WorksData.length;
+  const isEndOdd = index === WorksData.length - 1 && index % 2 === 0;
+
+  console.log(WorksData.length);
   return (
     <Work
       imgSrc={w.photo}
-      style={style}
+      style={isEndOdd ? style : {}}
       links={w.links}
       title={w.title}
       number={index + 1}
@@ -58,7 +60,7 @@ const Works: FC<WorksProps> = () => {
     <S.Works>
       <StyledContainer>
         <SectionTitle>Works</SectionTitle>
-        <FlexWrapper justify="space-between" gap="20px" wrap="wrap">
+        <FlexWrapper justify="space-between" gap="40px" wrap="wrap">
           {works}
         </FlexWrapper>
       </StyledContainer>

@@ -3,6 +3,7 @@ import { theme } from "../../styles/Theme";
 
 const Header = styled.header`
   position: fixed;
+  z-index: 9999;
   top: 0;
   right: 0;
   left: 0;

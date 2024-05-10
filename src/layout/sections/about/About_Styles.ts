@@ -45,6 +45,7 @@ const Description = styled.p`
 const Skills = styled.ul`
   max-width: 600px;
   width: 100%;
+  line-height: 1;
 
   font-size: 20px;
   /* line-height: 100%;

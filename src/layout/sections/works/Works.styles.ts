@@ -15,12 +15,13 @@ const Work = styled.div``;
 
 const ImageWrapper = styled.div`
   position: relative;
+  margin-bottom: 10px;
 `;
 
 const Img = styled.img`
-  max-width: 630px;
+  max-width: 600px;
   width: 100%;
-  height: 335px;
+  height: 300px;
   object-fit: cover;
 
   ::hover {
@@ -28,29 +29,14 @@ const Img = styled.img`
   }
 `;
 
-const LinksWrapper = styled.div`
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+const LinkWrapper = styled.div`
+  display: inline-block;
 
-  left: 50%;
-  transform: translateX(-50%);
-
-  display: flex;
-  justify-content: space-between;
-
-  width: 200px;
-  height: 40px;
-  background-color: red; */
+  margin: 0 50px;
 `;
 
 const Link = styled.a`
-  /* width: 80px;
-  height: 40px;
-  background-color: black;
-  color: white; */
-
-  color: white;
+  color: ${theme.colors.font2};
 `;
 
 const Description = styled.div`
@@ -66,8 +52,8 @@ export const S = {
   Work,
   ImageWrapper,
   Img,
-  LinksWrapper,
   Link,
+  LinkWrapper,
   Description,
   Title,
   Number,
