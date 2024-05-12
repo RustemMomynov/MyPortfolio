@@ -3,6 +3,7 @@ import { S } from "./Header.styles";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import Menu from "./headerMenu/Menu";
 import Logo from "../../components/logo/Logo";
+import MobileMenu from "./headerMenu/mobileMenu/MobileMenu";
 
 interface HeaderProps {}
 
@@ -18,7 +19,8 @@ const Header: FC<HeaderProps> = () => {
     <S.Header>
       <FlexWrapper justify="space-between">
         <Logo textLogo="Rustem." />
-        <Menu items={MenuItems} />
+        {/* <Menu items={MenuItems} /> */}
+        <MobileMenu />
       </FlexWrapper>
     </S.Header>
   );

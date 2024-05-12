@@ -15,10 +15,16 @@ const Header = styled.header`
 
   padding: 30px 80px;
 
-  /* outline: solid 2px white; */
+  @media (max-width: 1300px) {
+    padding: 30px 15px;
+  }
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
 
 const Menu = styled.ul`
   list-style: none;
@@ -61,10 +67,71 @@ const MenuItemLink = styled.a`
   color: ${theme.colors.font2};
 `;
 
+const BurgerButton = styled.button`
+  position: fixed;
+  width: 115px;
+  height: 115px;
+
+  top: 0;
+  right: 0;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+
+  cursor: pointer;
+
+  span {
+    display: block;
+
+    width: 36px;
+    height: 2px;
+
+    background-color: ${theme.colors.primaryBg};
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    transition: 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 2px;
+      background-color: ${theme.colors.primaryBg};
+      position: absolute;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+      transform: translateY(10px);
+      width: 20px;
+    }
+  }
+`;
+
+const MobileMenuWrapper = styled.div`
+  ${Menu} {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
 export const S = {
   Header,
   Nav,
   Menu,
   MenuItem,
   MenuItemLink,
+  BurgerButton,
+  MobileMenuWrapper,
 };
