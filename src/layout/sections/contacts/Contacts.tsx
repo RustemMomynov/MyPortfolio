@@ -12,7 +12,7 @@ const Contacts: FC<ContactsProps> = () => {
     <S.Contacts>
       <StyledContainer>
         <SectionTitle>contact me</SectionTitle>
-        <FlexWrapper justify="space-between" gap="50px">
+        <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
           <S.MessageBlock>
             <S.Form>
               <S.Field type="text" placeholder="Name" />

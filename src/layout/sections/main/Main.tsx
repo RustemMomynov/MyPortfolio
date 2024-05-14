@@ -15,7 +15,7 @@ const Main: FC<MainProps> = () => {
             <S.Name>Momynov Rustem</S.Name>
             <S.MainTitle>Web Developer</S.MainTitle>
             <S.PersonalInfo>Building web applications in React</S.PersonalInfo>
-            <StyledBtn>Get touch</StyledBtn>
+            <StyledBtn>Get in touch</StyledBtn>
           </S.ContentWrapper>
         </FlexWrapper>
       </StyledContainer>

@@ -11,7 +11,9 @@ const Works = styled.section`
   }
 `;
 
-const Work = styled.div``;
+const Work = styled.div`
+  margin: 0 auto;
+`;
 
 const ImageWrapper = styled.div`
   position: relative;

@@ -15,6 +15,7 @@ export default Logo;
 const StyledLogo = styled.div`
   font-size: 20px;
   line-height: 55px;
+  z-index: 9999;
 
   text-align: center;
 `;

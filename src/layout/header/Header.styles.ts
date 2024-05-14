@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "../../styles/Theme";
 
 const Header = styled.header`
@@ -8,7 +8,6 @@ const Header = styled.header`
   right: 0;
   left: 0;
 
-  background-color: rgba(${theme.colors.secondaryBg} 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 
   color: ${theme.colors.font2};
@@ -20,11 +19,7 @@ const Header = styled.header`
   }
 `;
 
-const Nav = styled.nav`
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`;
+const Nav = styled.nav``;
 
 const Menu = styled.ul`
   list-style: none;
@@ -62,12 +57,18 @@ const MenuItemLink = styled.a`
   font-size: 20px;
   line-height: 55px;
 
-  text-align: center;
+  /* text-align: center; */
 
   color: ${theme.colors.font2};
 `;
 
-const BurgerButton = styled.button`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
+  display: none;
+
+  @media ${theme.media.tablet} {
+    display: block;
+  }
+
   position: fixed;
   width: 115px;
   height: 115px;
@@ -77,6 +78,7 @@ const BurgerButton = styled.button`
 
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
 
   cursor: pointer;
 
@@ -95,6 +97,12 @@ const BurgerButton = styled.button`
 
     transition: 0.5s;
 
+    ${(props) =>
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
+        background-color: rgba(255, 255, 255, 0);
+      `}
+
     &::before,
     &::after {
       content: "";
@@ -103,26 +111,78 @@ const BurgerButton = styled.button`
       height: 2px;
       background-color: ${theme.colors.primaryBg};
       position: absolute;
+      transition: 0.5s;
     }
 
     &::before {
       transform: translateY(-10px);
+
+      ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          width: 36px;
+          transform: rotate(-45deg) translateY(0);
+        `}
     }
 
     &::after {
       transform: translateY(10px);
       width: 20px;
+
+      ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          width: 36px;
+          transform: rotate(45deg) translateY(0);
+        `}
     }
   }
 `;
 
 const MobileMenuWrapper = styled.div`
+  display: none;
+
+  @media ${theme.media.tablet} {
+    display: block;
+  }
+`;
+
+const DesktopMenu = styled.div`
+  display: block;
+
+  @media ${theme.media.tablet} {
+    display: none;
+    color: red;
+  }
+`;
+
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
+  display: none;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgba(0, 0, 0, 0.5);
+    `}
+
   ${Menu} {
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
+
+    font-size: 33.3px;
   }
 `;
 
@@ -134,4 +194,6 @@ export const S = {
   MenuItemLink,
   BurgerButton,
   MobileMenuWrapper,
+  DesktopMenu,
+  MobileMenuPopup,
 };

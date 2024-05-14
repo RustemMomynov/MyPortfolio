@@ -10,7 +10,7 @@ const Main = styled.main`
   background-color: ${theme.colors.secondaryBg};
   background-image: url(${myPhoto});
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 1920px;
   color: ${theme.colors.font2};
 
   ${StyledContainer} {

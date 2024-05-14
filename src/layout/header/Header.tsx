@@ -4,22 +4,16 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import Menu from "./headerMenu/Menu";
 import Logo from "../../components/logo/Logo";
 import MobileMenu from "./headerMenu/mobileMenu/MobileMenu";
+import DesktopMenu from "./headerMenu/desktopMenu/DesktopMenu";
 
 interface HeaderProps {}
-
-const MenuItems = [
-  { name: "Home", link: "" },
-  { name: "About", link: "" },
-  { name: "Works", link: "" },
-  { name: "Contacts", link: "" },
-];
 
 const Header: FC<HeaderProps> = () => {
   return (
     <S.Header>
       <FlexWrapper justify="space-between">
         <Logo textLogo="Rustem." />
-        {/* <Menu items={MenuItems} /> */}
+        <DesktopMenu />
         <MobileMenu />
       </FlexWrapper>
     </S.Header>

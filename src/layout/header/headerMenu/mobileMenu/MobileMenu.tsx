@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { S } from "../../Header.styles";
 import Menu from "../Menu";
 
@@ -12,13 +12,20 @@ const MenuItems = [
 ];
 
 const MobileMenu: FC<MobileMenuProps> = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      {/* <S.BurgerButton>
-        <span />
-      </S.BurgerButton> */}
       <S.MobileMenuWrapper>
-        <Menu items={MenuItems} />
+        <S.BurgerButton
+          onClick={() => setIsOpen((isOpen) => !isOpen)}
+          isOpen={isOpen}
+        >
+          <span />
+        </S.BurgerButton>
+        <S.MobileMenuPopup isOpen={isOpen}>
+          <Menu items={MenuItems} />
+        </S.MobileMenuPopup>
       </S.MobileMenuWrapper>
     </>
   );

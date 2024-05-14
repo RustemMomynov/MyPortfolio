@@ -38,20 +38,9 @@ const WorksData = [
 ];
 
 const works = WorksData.map((w, index) => {
-  const style = {
-    margin: "0 auto",
-  };
-  const isEndOdd = index === WorksData.length - 1 && index % 2 === 0;
-
-  console.log(WorksData.length);
+  // const isEndOdd = index === WorksData.length - 1 && index % 2 === 0;
   return (
-    <Work
-      imgSrc={w.photo}
-      style={isEndOdd ? style : {}}
-      links={w.links}
-      title={w.title}
-      number={index + 1}
-    />
+    <Work imgSrc={w.photo} links={w.links} title={w.title} number={index + 1} />
   );
 });
 
