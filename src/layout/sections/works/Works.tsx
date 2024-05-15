@@ -46,7 +46,7 @@ const works = WorksData.map((w, index) => {
 
 const Works: FC<WorksProps> = () => {
   return (
-    <S.Works>
+    <S.Works id={"works"}>
       <StyledContainer>
         <SectionTitle>Works</SectionTitle>
         <FlexWrapper justify="space-between" gap="40px" wrap="wrap">

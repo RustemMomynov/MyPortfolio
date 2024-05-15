@@ -9,7 +9,7 @@ interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id="contacts">
       <StyledContainer>
         <SectionTitle>contact me</SectionTitle>
         <FlexWrapper justify="space-between" gap="50px" wrap="wrap">

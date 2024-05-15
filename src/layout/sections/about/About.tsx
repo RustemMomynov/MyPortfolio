@@ -21,7 +21,7 @@ const About: FC<AboutProps> = () => {
   ];
 
   return (
-    <S.About>
+    <S.About id={"about"}>
       <StyledContainer>
         <SectionTitle>WHO AM I</SectionTitle>
         <FlexWrapper justify="space-between" wrap="wrap">

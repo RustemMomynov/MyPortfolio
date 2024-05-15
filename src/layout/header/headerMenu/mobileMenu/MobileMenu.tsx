@@ -4,13 +4,6 @@ import Menu from "../Menu";
 
 interface MobileMenuProps {}
 
-const MenuItems = [
-  { name: "Home", link: "" },
-  { name: "About", link: "" },
-  { name: "Works", link: "" },
-  { name: "Contacts", link: "" },
-];
-
 const MobileMenu: FC<MobileMenuProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +17,7 @@ const MobileMenu: FC<MobileMenuProps> = (props) => {
           <span />
         </S.BurgerButton>
         <S.MobileMenuPopup isOpen={isOpen}>
-          <Menu items={MenuItems} />
+          <Menu />
         </S.MobileMenuPopup>
       </S.MobileMenuWrapper>
     </>

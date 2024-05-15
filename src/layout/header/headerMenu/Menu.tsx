@@ -2,15 +2,29 @@ import { FC } from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { S } from "../Header.styles";
 
-interface MenuProps {
-  items: { name: string; link: string }[];
-}
+interface MenuProps {}
 
-const Menu: FC<MenuProps> = (props) => {
-  const items = props.items.map((i) => {
+const MenuItems = [
+  { name: "Home", link: "home" },
+  { name: "About", link: "about" },
+  { name: "Works", link: "works" },
+  { name: "Contacts", link: "contacts" },
+];
+
+const Menu: FC<MenuProps> = () => {
+  const items = MenuItems.map((i) => {
     return (
       <S.MenuItem>
-        <S.MenuItemLink href={i.link}>{i.name}</S.MenuItemLink>
+        <S.MenuItemLink
+          to={i.link}
+          smooth={true}
+          duration={500}
+          activeClass="active"
+          spy
+          offset={50}
+        >
+          {i.name}
+        </S.MenuItemLink>
       </S.MenuItem>
     );
   });

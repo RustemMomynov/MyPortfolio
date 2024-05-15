@@ -8,14 +8,16 @@ interface MainProps {}
 
 const Main: FC<MainProps> = () => {
   return (
-    <S.Main>
+    <S.Main id={"home"}>
       <StyledContainer>
         <FlexWrapper align="center">
           <S.ContentWrapper>
             <S.Name>Momynov Rustem</S.Name>
             <S.MainTitle>Web Developer</S.MainTitle>
             <S.PersonalInfo>Building web applications in React</S.PersonalInfo>
-            <StyledBtn>Get in touch</StyledBtn>
+            <a href="#contacts">
+              <StyledBtn>Get in touch</StyledBtn>
+            </a>
           </S.ContentWrapper>
         </FlexWrapper>
       </StyledContainer>

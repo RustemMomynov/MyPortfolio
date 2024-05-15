@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/Theme";
+import { Link } from "react-scroll";
 
 const Header = styled.header`
   position: fixed;
@@ -28,10 +29,19 @@ const Menu = styled.ul`
   gap: 20px;
 `;
 
-const MenuItem = styled.li`
+const MenuItem = styled.li``;
+
+const MenuItemLink = styled(Link)`
+  display: block;
+
+  font-size: 20px;
+  line-height: 55px;
+
+  color: ${theme.colors.font2};
+
   position: relative;
 
-  ::after {
+  &::after {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -46,20 +56,12 @@ const MenuItem = styled.li`
     transition: width 0.5s;
   }
 
-  &:hover {
-    ::after {
+  &:hover,
+  &.active {
+    &::after {
       width: 105%;
     }
   }
-`;
-
-const MenuItemLink = styled.a`
-  font-size: 20px;
-  line-height: 55px;
-
-  /* text-align: center; */
-
-  color: ${theme.colors.font2};
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
