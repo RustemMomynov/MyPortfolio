@@ -167,13 +167,17 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   z-index: 999;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-100%);
+  transition: 1s ease-in-out;
+
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
+      transform: translateY(0);
       background-color: rgba(0, 0, 0, 0.5);
     `}
 

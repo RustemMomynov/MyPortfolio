@@ -4,10 +4,30 @@ import { StyledContainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { StyledBtn } from "../../../components/Button";
 import { SectionTitle } from "../../../components/SectionTitle";
+import emailjs from "@emailjs/browser";
 
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <S.Contacts id="contacts">
       <StyledContainer>
