@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import myPhoto from "./../../../assets/images/background.png";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { StyledContainer } from "../../../components/Container";
 import { StyledBtn } from "../../../components/Button";
 

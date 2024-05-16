@@ -36,7 +36,7 @@ const Contacts: FC<ContactsProps> = () => {
   return (
     <S.Contacts id="contacts">
       <StyledContainer>
-        <SectionTitle>contact me</SectionTitle>
+        <SectionTitle>Contact me</SectionTitle>
         <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
           <S.MessageBlock>
             <S.Form ref={form} onSubmit={sendEmail}>
@@ -52,7 +52,7 @@ const Contacts: FC<ContactsProps> = () => {
                 name="user_email"
                 required
               />
-              <S.Field type="text" placeholder="Subject" name="subject" />
+              {/* <S.Field type="text" placeholder="Subject" name="subject" /> */}
               <S.Field
                 as={"textarea"}
                 placeholder="Message"

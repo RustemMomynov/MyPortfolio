@@ -6,8 +6,8 @@ export const SectionTitle = styled.h3`
 
   /* color: ${theme.colors.font1}; */
   font-weight: 700;
-  font-size: 32.2px;
+  font-size: 51.8px;
   margin-bottom: 90px;
 
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 `;

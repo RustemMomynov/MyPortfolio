@@ -23,6 +23,7 @@ const Form = styled.form`
     height: 100%;
     font-family: "Roboto";
     resize: none;
+    line-height: 1;
   }
 
   ${StyledBtn} {

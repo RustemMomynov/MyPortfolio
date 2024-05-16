@@ -1,13 +1,10 @@
-import { Line } from "rc-progress";
 import { FC } from "react";
-import ProgressBar from "../../../components/progressBar/ProgressBar";
 import { S } from "./About_Styles";
 import { StyledContainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import PersonalInfo from "./personalInfo/PersonalInfo";
 import Skills from "./skills/Skills";
-import { title } from "process";
 
 interface AboutProps {}
 
@@ -23,7 +20,7 @@ const About: FC<AboutProps> = () => {
   return (
     <S.About id={"about"}>
       <StyledContainer>
-        <SectionTitle>WHO AM I</SectionTitle>
+        <SectionTitle>Who am I</SectionTitle>
         <FlexWrapper justify="space-between" wrap="wrap">
           <PersonalInfo />
           <Skills skills={skillsData} />

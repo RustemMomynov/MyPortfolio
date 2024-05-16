@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { S } from "../Header.styles";
 
 interface MenuProps {}
