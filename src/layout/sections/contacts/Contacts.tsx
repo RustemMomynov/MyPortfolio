@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { ElementRef, FC, useRef } from "react";
 import { S } from "./Contacts.styles";
 import { StyledContainer } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -9,18 +9,23 @@ import emailjs from "@emailjs/browser";
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
-  const form = useRef();
+  const form = useRef<ElementRef<"form">>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
+    if (!form.current) return;
+
+    console.log(form.current);
+
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_xe3wkqf", "template_s8yidcg", form.current, {
+        publicKey: "t6hUi_sF5Vqg431PX",
       })
       .then(
         () => {
           console.log("SUCCESS!");
+          e.target.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -34,10 +39,26 @@ const Contacts: FC<ContactsProps> = () => {
         <SectionTitle>contact me</SectionTitle>
         <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
           <S.MessageBlock>
-            <S.Form>
-              <S.Field type="text" placeholder="Name" />
-              <S.Field type="email" placeholder="Email" />
-              <S.Field as={"textarea"} placeholder="Message" />
+            <S.Form ref={form} onSubmit={sendEmail}>
+              <S.Field
+                type="text"
+                placeholder="Name"
+                name="user_name"
+                required
+              />
+              <S.Field
+                type="email"
+                placeholder="Email"
+                name="user_email"
+                required
+              />
+              <S.Field type="text" placeholder="Subject" name="subject" />
+              <S.Field
+                as={"textarea"}
+                placeholder="Message"
+                name="message"
+                required
+              />
               <StyledBtn type="submit">Send</StyledBtn>
             </S.Form>
           </S.MessageBlock>

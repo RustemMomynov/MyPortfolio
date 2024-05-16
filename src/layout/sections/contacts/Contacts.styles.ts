@@ -41,6 +41,8 @@ const Field = styled.input`
   border-bottom: 1px solid ${theme.colors.font2};
   background-color: rgba(0, 0, 0, 0);
 
+  color: ${theme.colors.font2};
+
   &::placeholder {
     color: ${theme.colors.font2};
 
