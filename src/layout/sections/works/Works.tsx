@@ -7,12 +7,13 @@ import Work from "./work/Work";
 import ReactAppPhoto from "./../../../assets/images/works/React.png";
 import MNTNPhoto from "./../../../assets/images/works/MNTN.png";
 import MogoPhoto from "./../../../assets/images/works/Mogo.png";
+import ResumePhoto from "./../../../assets/images/works/Resume.png";
 
 interface WorksProps {}
 
 const WorksData = [
   {
-    title: "React App",
+    title: "React app",
     photo: ReactAppPhoto,
     links: {
       site: "https://rustemmomynov.github.io/middle-hosted-React-Redux-AntDesign-Typescript",

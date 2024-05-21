@@ -36,7 +36,7 @@ const Contacts: FC<ContactsProps> = () => {
   return (
     <S.Contacts id="contacts">
       <StyledContainer>
-        <SectionTitle>Contact me</SectionTitle>
+        <SectionTitle>Contact Me</SectionTitle>
         <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
           <S.MessageBlock>
             <S.Form ref={form} onSubmit={sendEmail}>
@@ -70,13 +70,13 @@ const Contacts: FC<ContactsProps> = () => {
 
             <S.SocialLinks>
               <S.Item>
-                <S.Link>INSTAGRAM</S.Link>
+                <S.Link>Instagram</S.Link>
               </S.Item>
               <S.Item>
-                <S.Link>LINKEDIN</S.Link>
+                <S.Link>Linkedin</S.Link>
               </S.Item>
               <S.Item>
-                <S.Link>HH</S.Link>
+                <S.Link>hh</S.Link>
               </S.Item>
             </S.SocialLinks>
           </S.Contact>

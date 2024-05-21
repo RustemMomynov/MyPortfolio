@@ -12,8 +12,8 @@ const About: FC<AboutProps> = () => {
   const skillsData = [
     { title: "HTML/CSS", progress: 80 },
     { title: "JAVASCRIPT", progress: 75 },
-    { title: "REACT", progress: 70 },
-    { title: "REST API", progress: 80 },
+    { title: "REACT", progress: 80 },
+    { title: "REST API", progress: 70 },
     { title: "GIT", progress: 60 },
   ];
 

@@ -18,6 +18,14 @@ const Work = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   margin-bottom: 10px;
+
+  filter: grayscale(100%);
+
+  transition: filter 0.4s;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 `;
 
 const Img = styled.img`
@@ -25,10 +33,6 @@ const Img = styled.img`
   width: 100%;
   height: 300px;
   object-fit: cover;
-
-  ::hover {
-    filter: grayscale(100%);
-  }
 `;
 
 const LinkWrapper = styled.div`

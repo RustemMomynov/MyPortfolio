@@ -13,7 +13,7 @@ const PersonalInfo = styled.div`
   max-width: 600px;
 
   @media (max-width: 1200px) {
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
   }
 
   ${StyledBtn} {
@@ -45,11 +45,19 @@ const Description = styled.p`
 const Skills = styled.ul`
   max-width: 600px;
   width: 100%;
-  line-height: 1;
+  line-height: 1.5;
+  height: 100%;
 
   font-size: 20px;
-  /* line-height: 100%;
-  margin-bottom: 10px; */
+
+  @media (max-width: 1200px) {
+    margin-bottom: 50px;
+    margin: 0 auto;
+  }
+
+  :last-child {
+    margin: 1px;
+  }
 `;
 
 const Skill = styled.li`
