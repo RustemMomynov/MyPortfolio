@@ -54,17 +54,16 @@ const Skills = styled.ul`
     margin-bottom: 50px;
     margin: 0 auto;
   }
-
-  :last-child {
-    margin: 1px;
-  }
 `;
 
 const Skill = styled.li`
   margin-bottom: 10px;
 `;
 
-const SkillTitle = styled.div``;
+const SkillTitle = styled.h3`
+  font-weight: 400;
+  font-size: 20px;
+`;
 
 export const S = {
   About,

@@ -10,7 +10,7 @@ const Skills: FC<SkillsProps> = (props) => {
   const skills = props.skills.map((s) => {
     return (
       <S.Skill>
-        <div>{s.title}</div>
+        <S.SkillTitle>{s.title}</S.SkillTitle>
         <ProgressBar percent={s.progress} />
       </S.Skill>
     );

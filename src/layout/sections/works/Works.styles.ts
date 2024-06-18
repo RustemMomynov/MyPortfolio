@@ -42,7 +42,33 @@ const LinkWrapper = styled.div`
 `;
 
 const Link = styled.a`
+  position: relative;
+
   color: ${theme.colors.font2};
+
+  &:after {
+    position: absolute;
+
+    content: "";
+    display: block;
+    background-color: ${theme.colors.font2};
+
+    height: 1px;
+    width: 0;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    right: 0;
+    bottom: -4px;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    &:after {
+      width: 105%;
+    }
+  }
 `;
 
 const Description = styled.div`

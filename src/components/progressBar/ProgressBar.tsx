@@ -39,4 +39,9 @@ export default ProgressBar;
 
 const BarWrapper = styled.div`
   height: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
 `;
