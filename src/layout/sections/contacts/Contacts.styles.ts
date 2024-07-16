@@ -20,7 +20,7 @@ const Form = styled.form`
   background-color: ${theme.colors.secondaryBg};
 
   textarea {
-    height: 100%;
+    height: 18px;
     font-family: "Roboto";
     resize: none;
     line-height: 1;

@@ -13,11 +13,6 @@ const Works = styled.section`
 
 const Work = styled.div`
   margin: 0 auto;
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  margin-bottom: 10px;
 
   filter: grayscale(100%);
 
@@ -26,6 +21,11 @@ const ImageWrapper = styled.div`
   &:hover {
     filter: grayscale(0%);
   }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  margin-bottom: 10px;
 `;
 
 const Img = styled.img`

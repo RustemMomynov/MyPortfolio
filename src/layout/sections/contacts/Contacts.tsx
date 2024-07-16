@@ -52,7 +52,6 @@ const Contacts: FC<ContactsProps> = () => {
                 name="user_email"
                 required
               />
-              {/* <S.Field type="text" placeholder="Subject" name="subject" /> */}
               <S.Field
                 as={"textarea"}
                 placeholder="Message"
