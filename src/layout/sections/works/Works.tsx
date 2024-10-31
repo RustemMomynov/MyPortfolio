@@ -7,16 +7,24 @@ import Work from "./work/Work";
 import ReactAppPhoto from "./../../../assets/images/works/React.png";
 import MNTNPhoto from "./../../../assets/images/works/MNTN.png";
 import MogoPhoto from "./../../../assets/images/works/Mogo.png";
-import ResumePhoto from "./../../../assets/images/works/Resume.png";
+import TodolistPhoto from "./../../../assets/images/works/Todolist.png";
 
-interface WorksProps {}
+type WorkDataType = {
+  title: string;
+  photo: string;
+  links: {
+    website: string;
+    code: string;
+  };
+};
 
-const WorksData = [
+const WorksData: WorkDataType[] = [
   {
     title: "React app",
     photo: ReactAppPhoto,
     links: {
-      site: "https://rustemmomynov.github.io/middle-hosted-React-Redux-AntDesign-Typescript",
+      website:
+        "https://rustemmomynov.github.io/middle-hosted-React-Redux-AntDesign-Typescript",
       code: "https://github.com/RustemMomynov/middle-React-Redux-AntDesign-TypeScript",
     },
   },
@@ -24,28 +32,35 @@ const WorksData = [
     title: "MNTN",
     photo: MNTNPhoto,
     links: {
-      site: "https://rustemmomynov.github.io/MNTN__Layout/",
+      website: "https://rustemmomynov.github.io/MNTN__Layout/",
       code: "https://github.com/RustemMomynov/MNTN__Layout",
+    },
+  },
+  {
+    title: "To-Do-List",
+    photo: TodolistPhoto,
+    links: {
+      website: "https://rustemmomynov.github.io/to-do-list/",
+      code: "https://github.com/RustemMomynov/to-do-list",
     },
   },
   {
     title: "MoGo",
     photo: MogoPhoto,
     links: {
-      site: "https://rustemmomynov.github.io/HTML-CSS---Mogo/",
+      website: "https://rustemmomynov.github.io/HTML-CSS---Mogo/",
       code: "https://github.com/RustemMomynov/HTML-CSS---Mogo",
     },
   },
 ];
 
 const works = WorksData.map((w, index) => {
-  // const isEndOdd = index === WorksData.length - 1 && index % 2 === 0;
   return (
     <Work imgSrc={w.photo} links={w.links} title={w.title} number={index + 1} />
   );
 });
 
-const Works: FC<WorksProps> = () => {
+const Works = () => {
   return (
     <S.Works id={"works"}>
       <StyledContainer>

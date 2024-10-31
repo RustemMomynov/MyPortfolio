@@ -20,6 +20,7 @@ const Menu: FC<MenuProps> = () => {
           duration={1000}
           activeClass="active"
           spy
+          offset={100}
         >
           {i.name}
         </S.MenuItemLink>

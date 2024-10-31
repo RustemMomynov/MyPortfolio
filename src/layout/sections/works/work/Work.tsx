@@ -7,14 +7,14 @@ interface WorkProps {
   number: number;
   title: string;
   style?: React.CSSProperties | undefined;
-  links: { site: string; code: string };
+  links: { website: string; code: string };
 }
 
 const Work: FC<WorkProps> = (props) => {
   return (
     <S.Work style={props.style}>
       <S.ImageWrapper>
-        <a href={props.links.site} target="_blank">
+        <a href={props.links.website} target="_blank">
           <S.Img src={props.imgSrc} />
         </a>
       </S.ImageWrapper>
@@ -22,7 +22,7 @@ const Work: FC<WorkProps> = (props) => {
       <S.Description>
         <FlexWrapper justify="space-between">
           <S.Title>{props.title}</S.Title> /
-          <S.Link target="_blank" href={props.links.site}>
+          <S.Link target="_blank" href={props.links.website}>
             WEBSITE
           </S.Link>
           /
