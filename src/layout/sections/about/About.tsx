@@ -10,11 +10,11 @@ interface AboutProps {}
 
 const About: FC<AboutProps> = () => {
   const skillsData = [
-    { title: "HTML/CSS", progress: 80 },
-    { title: "JAVASCRIPT", progress: 75 },
-    { title: "REACT", progress: 80 },
-    { title: "REST API", progress: 70 },
-    { title: "GIT", progress: 60 },
+    { title: "HTML/CSS", progress: 90 },
+    { title: "JAVASCRIPT", progress: 80 },
+    { title: "REACT", progress: 90 },
+    { title: "REST API", progress: 80 },
+    { title: "GIT", progress: 70 },
   ];
 
   return (

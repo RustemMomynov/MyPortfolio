@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
-import { StyledBtn } from "../../../components/Button";
 
 const Contacts = styled.section`
   font-size: 20px;
@@ -56,6 +55,7 @@ const Item = styled.li`
 
 const Link = styled.a`
   cursor: pointer;
+  color: ${theme.colors.font1};
 `;
 
 const Contact = styled.div`

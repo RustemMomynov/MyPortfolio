@@ -2,9 +2,7 @@ import { FC, useState } from "react";
 import { S } from "../../Header.styles";
 import Menu from "../Menu";
 
-interface MobileMenuProps {}
-
-const MobileMenu: FC<MobileMenuProps> = (props) => {
+const MobileMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

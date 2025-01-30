@@ -14,7 +14,7 @@ const Contacts: FC<ContactsProps> = () => {
         <S.ContactMe>
           <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
             <S.Email>
-              <h3>email</h3>
+              <h3>e-mail</h3>
               <div>slehder5657@gmail.com</div>
             </S.Email>
             <S.PhoneNumber>
@@ -25,13 +25,28 @@ const Contacts: FC<ContactsProps> = () => {
         </S.ContactMe>
         <S.SocialLinks>
           <S.Item>
-            <S.Link>Instagram</S.Link>
+            <S.Link
+              href="https://www.instagram.com/___._rustem_.___/"
+              target="_blank"
+            >
+              Instagram
+            </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link>Linkedin</S.Link>
+            <S.Link
+              href="https://www.linkedin.com/in/rustem-momynov-2609b0276/"
+              target="_blank"
+            >
+              Linkedin
+            </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link>HH</S.Link>
+            <S.Link
+              href="https://hh.kz/resume/a6eb70ceff09089c840039ed1f356d34514275"
+              target="_blank"
+            >
+              HH
+            </S.Link>
           </S.Item>
         </S.SocialLinks>
       </StyledContainer>
