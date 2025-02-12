@@ -15,7 +15,7 @@ const Header = styled.header`
 
   padding: 30px 80px;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1310px) {
     padding: 30px 15px;
   }
 `;
@@ -69,6 +69,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
   @media ${theme.media.tablet} {
     display: block;
+  }
+
+  @media ${theme.media.tablet} {
   }
 
   position: fixed;
