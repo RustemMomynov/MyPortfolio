@@ -17,7 +17,7 @@ const Main = styled.main`
   }
 
   @media ${theme.media.container} {
-    ${getFont({ Fmin: 12.4, Fmax: 20 })}
+    ${getFont({ Fmax: 20, Fmin: 15 })}
   }
 
   @media (max-width: 1440px) {
@@ -41,7 +41,6 @@ const ContentWrapper = styled.div`
     color: ${theme.colors.font2};
     border: 1px solid ${theme.colors.primaryBg};
 
-    cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
 
     &:hover {
@@ -51,7 +50,7 @@ const ContentWrapper = styled.div`
     }
 
     @media ${theme.media.container} {
-      ${getFont({ Fmin: 12.4, Fmax: 20 })}
+      ${getFont({ Fmax: 20, Fmin: 15 })}
     }
 
     @media ${theme.media.tablet} {
@@ -65,7 +64,7 @@ const Name = styled.h2`
   ${getFont({ Fmax: 84.7, Fmin: 84.7, weight: 700 })};
 
   @media ${theme.media.container} {
-    ${getFont({ Fmax: 84.7, Fmin: 52.3 })}
+    ${getFont({ Fmax: 84.7, Fmin: 63.5 })}
   }
 `;
 
@@ -73,7 +72,7 @@ const MainTitle = styled.h1`
   ${getFont({ Fmax: 52.3, Fmin: 52.3, weight: 700 })};
 
   @media ${theme.media.container} {
-    ${getFont({ Fmax: 52.3, Fmin: 32.3 })}
+    ${getFont({ Fmax: 52.3, Fmin: 39.2 })}
   }
 `;
 
@@ -84,7 +83,7 @@ const PersonalInfo = styled.p`
   ${getFont({ Fmax: 32.3, Fmin: 32.3, lineHeight: 2 })};
 
   @media ${theme.media.container} {
-    ${getFont({ Fmax: 32.3, Fmin: 20 })}
+    ${getFont({ Fmax: 32.3, Fmin: 24.2 })}
   }
 
   margin: 35px 0 65px;

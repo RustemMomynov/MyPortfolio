@@ -27,12 +27,12 @@ const PersonalInfo = styled.div`
     background-color: ${theme.colors.secondaryBg};
     color: ${theme.colors.font2};
 
-    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
-    ::hover {
+    &:hover {
       background-color: rgba(1, 1, 1, 0);
-      color: ${theme.colors.font2};
-      border: 1px solid ${theme.colors.primaryBg};
+      color: ${theme.colors.font1};
+      border: 1px solid ${theme.colors.secondaryBg};
     }
   }
 `;

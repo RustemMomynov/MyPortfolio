@@ -31,5 +31,5 @@ export const getFont = ({
     ${weight ? `font-weight: ${weight};` : ""}
     ${color ? `color: ${color};` : ""}
     ${lineHeight ? `line-height: ${lineHeight};` : ""}
-    font-size: clamp(${Fmin}px, calc((100vw - 360px) / (1310 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px), ${Fmax}px);
+    font-size: clamp(${Fmin}px, calc((100vw - 375px) / (1310 - 375) * (${Fmax} - ${Fmin}) + ${Fmin}px), ${Fmax}px);
   `;

@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { getFont } from "../../../styles/Common";
 
-const Contacts = styled.section`
-  font-size: 20px;
-`;
+const Contacts = styled.section``;
 
 const PhoneNumber = styled.div`
   font-size: 32.3px;
@@ -15,6 +14,14 @@ const PhoneNumber = styled.div`
   h3 {
     font-size: 20px;
     font-weight: 400;
+  }
+
+  @media ${theme.media.container} {
+    ${getFont({ Fmax: 32.3, Fmin: 24.2 })}
+
+    h3 {
+      ${getFont({ Fmax: 20, Fmin: 15 })}
+    }
   }
 `;
 
@@ -34,11 +41,8 @@ const Item = styled.li`
     position: absolute;
     bottom: -5px;
     left: 0;
-    /* left: 50%;
-    transform: translateX(-50%); */
 
     content: "";
-
     width: 0%;
     height: 1px;
     background-color: ${theme.colors.font1};
@@ -50,6 +54,10 @@ const Item = styled.li`
     ::after {
       width: 105%;
     }
+  }
+
+  @media ${theme.media.container} {
+    ${getFont({ Fmax: 20, Fmin: 15 })}
   }
 `;
 
@@ -81,6 +89,14 @@ const Email = styled.div`
   h3 {
     font-size: 20px;
     font-weight: 400;
+  }
+
+  @media ${theme.media.container} {
+    ${getFont({ Fmax: 32.3, Fmin: 20 })}
+
+    h3 {
+      ${getFont({ Fmax: 20, Fmin: 12.4 })}
+    }
   }
 `;
 
