@@ -12,8 +12,8 @@ const PersonalInfo = styled.div`
   justify-content: space-between;
   max-width: 600px;
 
-  @media (max-width: 1200px) {
-    margin: 0 auto 50px;
+  @media (max-width: 1270px) {
+    margin: 0 auto;
   }
 
   ${StyledBtn} {
@@ -50,8 +50,7 @@ const Skills = styled.ul`
 
   font-size: 20px;
 
-  @media (max-width: 1200px) {
-    margin-bottom: 50px;
+  @media (max-width: 1270px) {
     margin: 0 auto;
   }
 `;

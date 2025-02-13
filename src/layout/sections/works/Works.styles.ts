@@ -11,15 +11,24 @@ const Works = styled.section`
   }
 `;
 
-const Work = styled.div`
-  margin: 0 auto;
+const WorksWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+`;
 
+const Work = styled.div`
   filter: grayscale(100%);
 
   transition: filter 0.4s;
 
   &:hover {
     filter: grayscale(0%);
+  }
+
+  @media (max-width: 1270px) {
+    margin: 0 auto;
   }
 `;
 
@@ -81,6 +90,7 @@ const Number = styled.div``;
 
 export const S = {
   Works,
+  WorksWrapper,
   Work,
   ImageWrapper,
   Img,

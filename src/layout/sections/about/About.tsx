@@ -21,7 +21,7 @@ const About: FC<AboutProps> = () => {
     <S.About id={"about"}>
       <StyledContainer>
         <SectionTitle>Who am I</SectionTitle>
-        <FlexWrapper justify="space-between" wrap="wrap">
+        <FlexWrapper justify="space-between" wrap="wrap" gap="40px">
           <PersonalInfo />
           <Skills skills={skillsData} />
         </FlexWrapper>

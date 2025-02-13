@@ -11,8 +11,9 @@ const Contacts: FC<ContactsProps> = () => {
     <S.Contacts id="contacts">
       <StyledContainer>
         <SectionTitle>Contact Me</SectionTitle>
+
         <S.ContactMe>
-          <FlexWrapper justify="space-between" gap="50px" wrap="wrap">
+          <FlexWrapper justify="space-between" gap="40px" wrap="wrap">
             <S.Email>
               <h3>e-mail</h3>
               <div>slehder5657@gmail.com</div>

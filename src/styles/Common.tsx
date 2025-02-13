@@ -8,19 +8,6 @@ type FontPropsType = {
   Fmax?: number;
 };
 
-export const getFont1 = ({
-  Fmin,
-  Fmax,
-  color,
-  weight,
-  lineHeight,
-}: FontPropsType) =>
-  `font-weight: ${weight || 400};
-   color: ${color || theme.colors.font2};
-   line-height: ${lineHeight || 1.2};
-   font-size: 
-   clamp( ${Fmin}px, calc( (100vw - 360px)/(1310 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px), ${Fmax}px);`;
-
 export const getFont = ({
   Fmin,
   Fmax,

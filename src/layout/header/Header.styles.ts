@@ -27,6 +27,8 @@ const Menu = styled.ul`
 
   display: flex;
   gap: 20px;
+
+  user-select: none;
 `;
 
 const MenuItem = styled.li``;

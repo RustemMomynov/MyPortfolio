@@ -7,7 +7,7 @@ interface DesktopMenuProps {}
 const DesktopMenu: FC<DesktopMenuProps> = () => {
   return (
     <S.DesktopMenu>
-      <Menu />
+      <Menu callback={() => {}} />
     </S.DesktopMenu>
   );
 };

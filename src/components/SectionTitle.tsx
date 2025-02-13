@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { getFont } from "../styles/Common";
 
 export const SectionTitle = styled.h3`
-  position: relative;
-
-  /* color: ${theme.colors.font1}; */
   font-weight: 700;
   font-size: 51.8px;
   margin-bottom: 90px;
 
-  /* text-transform: uppercase; */
+  @media ${theme.media.container} {
+    ${getFont({ Fmax: 51.8, Fmin: 38.8 })}
+  }
 `;

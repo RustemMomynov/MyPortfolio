@@ -65,9 +65,7 @@ const Works = () => {
     <S.Works id={"works"}>
       <StyledContainer>
         <SectionTitle>Works</SectionTitle>
-        <FlexWrapper justify="space-between" gap="40px" wrap="wrap">
-          {works}
-        </FlexWrapper>
+        <S.WorksWrapper>{works}</S.WorksWrapper>
       </StyledContainer>
     </S.Works>
   );

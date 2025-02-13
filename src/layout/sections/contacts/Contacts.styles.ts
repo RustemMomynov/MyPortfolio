@@ -23,12 +23,20 @@ const PhoneNumber = styled.div`
       ${getFont({ Fmax: 20, Fmin: 15 })}
     }
   }
+
+  @media (max-width: 1270px) {
+    margin: 0 auto;
+  }
 `;
 
 const SocialLinks = styled.ul`
   display: flex;
   gap: 20px;
   color: ${theme.colors.font1};
+
+  @media (max-width: 1270px) {
+    margin: 0 auto;
+  }
 `;
 
 const Item = styled.li`
@@ -97,6 +105,10 @@ const Email = styled.div`
     h3 {
       ${getFont({ Fmax: 20, Fmin: 12.4 })}
     }
+  }
+
+  @media (max-width: 1270px) {
+    margin: 0 auto;
   }
 `;
 

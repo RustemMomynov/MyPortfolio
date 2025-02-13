@@ -15,7 +15,7 @@ const MobileMenu: FC = () => {
           <span />
         </S.BurgerButton>
         <S.MobileMenuPopup isOpen={isOpen}>
-          <Menu />
+          <Menu callback={() => setIsOpen(!isOpen)} />
         </S.MobileMenuPopup>
       </S.MobileMenuWrapper>
     </>

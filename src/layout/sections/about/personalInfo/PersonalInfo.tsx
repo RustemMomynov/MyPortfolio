@@ -8,11 +8,10 @@ const PersonalInfo: FC<PersonalInfoProps> = () => {
   return (
     <S.PersonalInfo>
       <S.Description>
-        I've been doing Frontend development on React for 2 years, while
-        combining it with work. I have strong knowledge of HTML CSS, JavaScript
-        and React. At the moment I write projects for myself.
+        React developer, total development experience of 3 years. Initiative and
+        hardworking. Looking for a company where I will improve and grow to a
+        strong technical specialist. I will be glad to meet anyone
       </S.Description>
-      <StyledBtn>ABOUT ME</StyledBtn>
     </S.PersonalInfo>
   );
 };

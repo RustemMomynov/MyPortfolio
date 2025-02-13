@@ -1,21 +1,24 @@
 import { FC, useEffect, useState } from "react";
 import { S } from "../Header.styles";
 
-interface MenuProps {}
+interface MenuProps {
+  callback: () => void;
+}
 
 interface MenuItem {
   name: string;
   link: string;
+  offset?: number;
 }
 
 const menuItems: MenuItem[] = [
   { name: "Home", link: "home" },
-  { name: "About", link: "about" },
+  { name: "About", link: "about", offset: -115 },
   { name: "Works", link: "works" },
   { name: "Contacts", link: "contacts" },
 ];
 
-const Menu: FC<MenuProps> = () => {
+const Menu: FC<MenuProps> = ({ callback }) => {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
@@ -49,7 +52,9 @@ const Menu: FC<MenuProps> = () => {
         duration={1000}
         activeClass="active"
         spy
+        offset={item.offset && item.offset}
         className={activeSection === item.link ? "active" : ""}
+        onClick={() => callback()}
       >
         {item.name}
       </S.MenuItemLink>
