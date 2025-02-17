@@ -28,8 +28,10 @@ ul {
 
 section {
     padding: 100px 0;
-    /* background-color: ${theme.colors.secondaryBg};
-    color: ${theme.colors.font2}; */
+    
+  @media (max-width: 1270px) {
+    padding: 50px 0;
+  }
 }
 
 section:nth-of-type(odd) {

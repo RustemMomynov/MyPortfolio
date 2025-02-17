@@ -10,4 +10,8 @@ export const SectionTitle = styled.h3`
   @media ${theme.media.container} {
     ${getFont({ Fmax: 51.8, Fmin: 38.8 })}
   }
+
+  @media (max-width: 1270px) {
+    margin-bottom: 50px;
+  }
 `;

@@ -61,10 +61,14 @@ const ContentWrapper = styled.div`
 `;
 
 const Name = styled.h2`
-  ${getFont({ Fmax: 84.7, Fmin: 84.7, weight: 700 })};
+  ${getFont({ Fmax: 84.7, Fmin: 84.7, weight: 700, lineHeight: 1.1 })};
 
   @media ${theme.media.container} {
     ${getFont({ Fmax: 84.7, Fmin: 63.5 })}
+  }
+
+  @media (max-width: 585px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -80,7 +84,7 @@ const PersonalInfo = styled.p`
   font-size: 32.3px;
   line-height: 2;
 
-  ${getFont({ Fmax: 32.3, Fmin: 32.3, lineHeight: 2 })};
+  ${getFont({ Fmax: 32.3, Fmin: 32.3, lineHeight: 1.5 })};
 
   @media ${theme.media.container} {
     ${getFont({ Fmax: 32.3, Fmin: 24.2 })}
