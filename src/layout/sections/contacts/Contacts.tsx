@@ -16,7 +16,7 @@ const Contacts: FC<ContactsProps> = () => {
           <FlexWrapper justify="space-between" gap="40px" wrap="wrap">
             <S.Email>
               <h3>e-mail</h3>
-              <div>slehder5657@gmail.com</div>
+              <div>momynovrustem@gmail.com</div>
             </S.Email>
             <S.PhoneNumber>
               <h3>mobile</h3>
