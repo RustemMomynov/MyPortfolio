@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
-
 *, *::before, *::after {
     margin: 0;
     padding: 0;

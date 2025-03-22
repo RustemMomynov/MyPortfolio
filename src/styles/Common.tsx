@@ -1,5 +1,3 @@
-import { theme } from "./Theme";
-
 type FontPropsType = {
   color?: string;
   weight?: number;

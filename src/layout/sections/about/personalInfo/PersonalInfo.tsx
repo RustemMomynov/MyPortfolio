@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { S } from "../About_Styles";
-import { StyledBtn } from "../../../../components/Button";
 
 interface PersonalInfoProps {}
 

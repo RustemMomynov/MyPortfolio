@@ -3,8 +3,7 @@ import { theme } from "../styles/Theme";
 import { getFont } from "../styles/Common";
 
 export const SectionTitle = styled.h3`
-  font-weight: 700;
-  font-size: 51.8px;
+  ${getFont({ Fmax: 51.8, Fmin: 51.8, weight: 700 })}
   margin-bottom: 90px;
 
   @media ${theme.media.container} {
