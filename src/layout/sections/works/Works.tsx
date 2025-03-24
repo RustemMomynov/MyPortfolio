@@ -20,7 +20,7 @@ type WorkDataType = {
 
 const WorksData: WorkDataType[] = [
   {
-    title: "React app",
+    title: "Calendar",
     photo: ReactAppPhoto,
     links: {
       website:
