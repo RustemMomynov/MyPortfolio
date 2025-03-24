@@ -4,7 +4,7 @@ import { StyledContainer } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import Work from "./work/Work";
-import ReactAppPhoto from "./../../../assets/images/works/React.png";
+import GreenApiPhoto from "./../../../assets/images/works/greenApi.png";
 import MNTNPhoto from "./../../../assets/images/works/MNTN.png";
 import MogoPhoto from "./../../../assets/images/works/Mogo.png";
 import TodolistPhoto from "./../../../assets/images/works/Todolist.png";
@@ -20,12 +20,12 @@ type WorkDataType = {
 
 const WorksData: WorkDataType[] = [
   {
-    title: "Calendar",
-    photo: ReactAppPhoto,
+    title: "WA Clone",
+    photo: GreenApiPhoto,
     links: {
       website:
-        "https://rustemmomynov.github.io/middle-hosted-React-Redux-AntDesign-Typescript",
-      code: "https://github.com/RustemMomynov/middle-React-Redux-AntDesign-TypeScript",
+        "https://rustemmomynov.github.io",
+      code: "https://github.com/RustemMomynov/green-api-app",
     },
   },
   {
