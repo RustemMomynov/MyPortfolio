@@ -7,44 +7,40 @@ interface ProgressBarProps {
   percent: number;
 }
 
-
 const ProgressBar: FC<ProgressBarProps> = ({ percent: targetPercent }) => {
   const [percent, setPercent] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (hasAnimated) return;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          let start: number | null = null;
+
+          const animate = (timestamp: number) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / 1000, 1);
+            setPercent(Math.round(targetPercent * progress));
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              setHasAnimated(true);
+            }
+          };
+
+          requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
 
     if (ref.current) observer.observe(ref.current);
-
     return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (isVisible) {
-      setPercent(0);
-      const interval = setInterval(() => {
-        setPercent((prev) => {
-          if (prev < targetPercent) {
-            return prev + 1;
-          } else {
-            clearInterval(interval);
-            return prev;
-          }
-        });
-      }, 10);
-
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, targetPercent]);
+  }, [targetPercent, hasAnimated]);
 
   return (
     <BarWrapper ref={ref}>
@@ -64,8 +60,6 @@ export default ProgressBar;
 
 const BarWrapper = styled.div`
   height: 20px;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 `;
