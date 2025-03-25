@@ -11,13 +11,6 @@ const Works = styled.section`
   }
 `;
 
-const WorksWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-`;
-
 const Work = styled.div`
   filter: grayscale(100%);
 
@@ -90,7 +83,6 @@ const Number = styled.div``;
 
 export const S = {
   Works,
-  WorksWrapper,
   Work,
   ImageWrapper,
   Img,
