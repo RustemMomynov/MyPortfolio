@@ -24,7 +24,7 @@ const WorksData: WorkDataType[] = [
     photo: GreenApiPhoto,
     links: {
       website:
-        "https://rustemmomynov.github.io",
+        "https://rustemmomynov.github.io/green-api-app/",
       code: "https://github.com/RustemMomynov/green-api-app",
     },
   },
